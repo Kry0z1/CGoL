@@ -74,7 +74,7 @@ public class GameStep : MonoBehaviour
 
         var scores = new System.Collections.Concurrent.ConcurrentBag<(int, int)>();
 
-        Parallel.For(0, grid.x, i =>
+        for (int i = 0; i < grid.x; i++)
         {
             int localScore1 = 0;
             int localScore2 = 0;
@@ -94,7 +94,7 @@ public class GameStep : MonoBehaviour
             }
 
             scores.Add((localScore1, localScore2));
-        });
+        };
 
         foreach (var (score1, score2) in scores)
         {

@@ -23,8 +23,6 @@ public class Menu : MonoBehaviour
 
     void Start()
     {
-        Application.targetFrameRate = 30;
-        
         singleplayerButton.onClick.AddListener(SinglePlay);
         multiplayerButton.onClick.AddListener(MultiPlay);
         settingsButton.onClick.AddListener(ShowSettings);
@@ -44,7 +42,7 @@ public class Menu : MonoBehaviour
 
     void OpenLink()
     {
-        Application.OpenURL("https://google.com");
+        Application.OpenURL("https://github.com/Kry0z1/CGoL");
     }
     
     void ShowSettings()
@@ -56,6 +54,7 @@ public class Menu : MonoBehaviour
     {
         isActive = true;
         mainMenuPanel.SetActive(true);
+        grid.SetActive(false);
     }
 
     public void Hide()
